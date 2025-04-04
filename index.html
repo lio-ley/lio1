@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Guessing Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 10px 15px;
+      font-size: 1em;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #ff7e5f;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #ff7e5f;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #eb6b4d;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #333;
+      max-width: 80%;
+      text-align: center;
+    }
+
+    .win {
+  background: linear-gradient(to right, #a8e063, #56ab2f) !important;
+  transition: background 0.5s ease;
+    }
+
+    .lose {
+      background-color: #f8d7da;
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <h1>Word Guessing Game</h1>
+  <p>Hint: A fruit that starts with the letter P!</p>
+  <input type="text" id="guessInput" placeholder="Enter your guess" />
+  <div>
+    <button onclick="submitGuess()">Submit</button>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+  <div id="message"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
